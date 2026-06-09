@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Blog Posts</h1>
+
+  <ul>
+    <li *ngFor="let post of posts" (click)="showDescription(post)">
+      {{ post.title }}
+    </li>
+  </ul>
+
+  <div class="description" *ngIf="selectedPost">
+    <h2>{{ selectedPost.title }}</h2>
+    <p>{{ selectedPost.description }}</p>
+  </div>
+</div>
